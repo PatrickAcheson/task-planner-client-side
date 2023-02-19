@@ -48,16 +48,8 @@ window.addEventListener('load', () => {
       taskDeleteEl.textContent = 'Delete';
   
       const taskButtonEl = document.createElement('button');
-      taskButtonEl.classList.add('task-button');
+      taskButtonEl.classList.add('tickbox');
       taskButtonEl.style.backgroundColor = 'red';
-      
-      taskButtonEl.addEventListener('click', (e) => {
-        if (taskButtonEl.style.backgroundColor === 'red') {
-          taskButtonEl.style.backgroundColor = 'green';
-        } else {
-          taskButtonEl.style.backgroundColor = 'red';
-        }
-      });
       
       taskActionsEl.appendChild(taskEditEl);
       taskActionsEl.appendChild(taskDeleteEl);
@@ -65,8 +57,15 @@ window.addEventListener('load', () => {
       taskEl.appendChild(taskActionsEl);
       
       list.appendChild(taskEl);
-      
       input.value = '';
+
+      taskButtonEl.addEventListener('click', (e) => {
+        if (taskButtonEl.style.backgroundColor === 'red') {
+          taskButtonEl.style.backgroundColor = 'green';
+        } else {
+          taskButtonEl.style.backgroundColor = 'red';
+        }
+      });
       
       taskEditEl.addEventListener('click', (e) => {
         if (taskEditEl.textContent.toLowerCase() === 'edit') {

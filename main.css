@@ -191,27 +191,12 @@ main {
 }
 
 .tickbox {
-	position: relative;
-	width: 20px;
-	height: 20px;
-	background-color: red;
+	appearance: none;
 	border: none;
 	outline: none;
-	cursor: pointer;
-	border-radius: 3px;
-
-  }
-  
-  .tickbox:after {
-	content: "";
-	position: absolute;
-	display: none;
-  }
-  
-  .tickbox:checked:after {
-	display: block;
-  }
-  
-  .tickbox:checked {
-	background-color: green;
+	position: relative;
+	width: 25px;
+	height: 25px;
+	transition: background-color 0.2s ease;
+	border-radius: 10px;
   }
