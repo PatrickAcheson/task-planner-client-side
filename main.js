@@ -3,7 +3,8 @@ window.addEventListener('load', () => {
     const form = document.querySelector('#new-task-form');
     const input = document.querySelector('#new-task-input');
     const list = document.querySelector('#tasks');
-  
+
+
     // Add a submit event listener to the form
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -19,7 +20,7 @@ window.addEventListener('load', () => {
         return;
       }
   
-      // Create the new task element
+      // Create the new task elements
       const taskEl = document.createElement('div');
       taskEl.classList.add('task');
   
@@ -46,15 +47,27 @@ window.addEventListener('load', () => {
       taskDeleteEl.classList.add('delete');
       taskDeleteEl.textContent = 'Delete';
   
+      const taskButtonEl = document.createElement('button');
+      taskButtonEl.classList.add('task-button');
+      taskButtonEl.style.backgroundColor = 'red';
+      
+      taskButtonEl.addEventListener('click', (e) => {
+        if (taskButtonEl.style.backgroundColor === 'red') {
+          taskButtonEl.style.backgroundColor = 'green';
+        } else {
+          taskButtonEl.style.backgroundColor = 'red';
+        }
+      });
+      
       taskActionsEl.appendChild(taskEditEl);
       taskActionsEl.appendChild(taskDeleteEl);
+      taskActionsEl.appendChild(taskButtonEl);
       taskEl.appendChild(taskActionsEl);
-  
+      
       list.appendChild(taskEl);
-  
+      
       input.value = '';
-  
-      // Add event listeners to the new task element's buttons
+      
       taskEditEl.addEventListener('click', (e) => {
         if (taskEditEl.textContent.toLowerCase() === 'edit') {
           taskEditEl.textContent = 'Save';

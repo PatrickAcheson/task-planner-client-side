@@ -13,7 +13,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace, bold;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .bg {
@@ -190,3 +190,28 @@ main {
     color: #EF4444;
 }
 
+.tickbox {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 3px;
+
+  }
+  
+  .tickbox:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  
+  .tickbox:checked:after {
+	display: block;
+  }
+  
+  .tickbox:checked {
+	background-color: green;
+  }
