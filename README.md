@@ -31,3 +31,7 @@ This is a simple task planner app that allows you to create and manage your to-d
   <li>Delete tasks by clicking the trash can icon next to the task</li>
   <li>View statistics about your tasks on the dashboard page</li>
 </ul>
+
+<h1> Design so far </h1>
+
+![image](https://user-images.githubusercontent.com/90014630/219970547-a755c431-071e-4082-8d42-297cb4317336.png)
