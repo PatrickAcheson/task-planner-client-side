@@ -19,6 +19,8 @@ This is a simple task planner app that allows you to create and manage your to-d
 </ul>
 <b>Getting Started</b>
 
+You can check it out at https://patrickacheson.github.io/task-planner-newest/
+
 <ol>
   <li>Clone the repository to your local machine</li>
   <li>Open the index.html file in your web browser</li>
